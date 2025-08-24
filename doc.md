@@ -8,15 +8,21 @@
 ## 1. モデルの考え方
 
 - **UseCases**  
-  - 全ユースケースの台帳。ROI型/非ROI型問わず一元管理する。
+  - 全ユースケースの台帳。ROI型/非ROI型問わず一元管理する。  
 - **UseCaseTypes**  
-  - ユースケースの利活用類型（例：ML訓練、BI可視化、統計分析 等）。
+  - ユースケースの利活用類型（例：ML訓練、BI可視化、統計分析 等）。  
 - **UseCaseUseCaseTypes**  
-  - UseCases と UseCaseTypes の多対多対応。
+  - UseCases と UseCaseTypes の多対多対応。  
 - **Programs / Projects**  
   - 財源や推進単位を表す枠組み。  
   - ROI型ユースケースは独立プロジェクト化可能。  
-  - 非ROI型ユースケース（Enablement/Compliance等）は、既存のプログラム/プロジェクトにサブセットとしてぶら下げる。
+  - 非ROI型ユースケース（Enablement/Compliance等）は、既存のプログラム/プロジェクトにサブセットとしてぶら下げる。  
+- **BillingResources**  
+  - クラウド/サービス上の課金対象リソースの台帳（Storage, Compute 等）。  
+- **BillingEvents**  
+  - 課金実績を表す事実テーブル（利用量、請求月、コスト等）。  
+- **UseCaseAllocations**  
+  - BillingEvents をユースケースへ配賦するためのブリッジ。  
 
 ---
 
